@@ -5,11 +5,10 @@
     <title></title>
   </head>
   <body>
-    <h2>hi</h2>
 
-    <div ng-controller = "listController">
-        <p ng-repeat= "pet in allPets"></p>
-        <p>{{ showAllPets.pet_name }}</p>
-    </div>
+    <table ng-controller = "listController">
+      <td class="jumbotron text-center" ng-repeat= "pet in allPets">{{pet.pet_name}}, {{pet.pet_type}}, {{pet.pet_age}}</td>
+    </table>
+
   </body>
 </html>

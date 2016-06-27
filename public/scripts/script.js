@@ -53,19 +53,22 @@ myApp.controller('addController', [ '$scope', '$http', function ($scope, $http) 
     };
   }]);
 
+// ---------------------------------------------------------------------------------
+
 myApp.controller('listController', [ '$scope', '$http', function ($scope, $http) {
   $scope.allPets = [];
 
-  var showPets = $scope.showAllPets = function(){
+  $scope.showAllPets = function(){
+    console.log( 'in get pets' );
   $http({
   method: 'GET',
-  url:'/getPets',
-}).then(function(response){
+  url:'/getPets'
+}).then(function( response ){
   $scope.allPets = response.data;
-  console.log(response);
+  console.log($scope.response);
   });
-  console.log($scope.allPets);
+// Push??????
 
   };
-  showPets();
+  $scope.showAllPets();
 }]);

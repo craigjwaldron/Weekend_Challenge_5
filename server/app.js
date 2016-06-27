@@ -47,13 +47,13 @@ var newAnimal = new Pet ({
 });
 
 // --------------------------------------------------------
+// App.get to display on DOM
 app.get('/getPets', function( req, res){
   console.log("in app.get");
-  Pet.find()
-  .then(function(data){
+  Pet.find().then(function(data){ // Finding all the pets in DB
     res.send(data);
-  });
-});
+  }); // End of find function
+}); // End of app.get
 
 // Spinning up the server
 app.listen( 3000, 'localhost', function( req, res ){
