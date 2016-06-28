@@ -6,9 +6,11 @@
   </head>
   <body>
 
-    <table ng-controller = "listController">
-      <td class="jumbotron text-center" ng-repeat= "pet in allPets">{{pet.pet_name}}, {{pet.pet_type}}, {{pet.pet_age}}</td>
-    </table>
+    <ul style="list-style-type:none" align="center" ng-controller = "listController">
+
+      <li class="jumbotron text-center" ng-repeat= "pet in allPets"><img ng-src="{{pet.pet_image}}"/><br><p><b>Name: </b>{{pet.pet_name}}</p><p><b>Type: </b>{{pet.pet_type}}</p><p><b>Age: </b>{{pet.pet_age}}</p></li>
+
+    </ul>
 
   </body>
 </html>

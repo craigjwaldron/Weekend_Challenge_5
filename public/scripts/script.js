@@ -40,7 +40,8 @@ myApp.controller('addController', [ '$scope', '$http', function ($scope, $http) 
     var newPet = {
       name: $scope.nameIn,
       type: $scope.typeIn,
-      age: $scope.ageIn
+      age: $scope.ageIn,
+      image: $scope.imageIn
       };
 
       console.log(newPet);
@@ -50,8 +51,12 @@ myApp.controller('addController', [ '$scope', '$http', function ($scope, $http) 
     url:'/add',
     data: newPet
       });
+      $scope.nameIn ='';
+      $scope.typeIn ='';
+      $scope.ageIn ='';
+      $scope.imageIn='';
     };
-  }]);
+  }]); // End of add controller
 
 // ---------------------------------------------------------------------------------
 

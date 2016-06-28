@@ -33,7 +33,8 @@ app.post('/add', function( req, res ){
 var newAnimal = new Pet ({
   pet_name: req.body.name,
   pet_type: req.body.type,
-  pet_age: req.body.age
+  pet_age: req.body.age,
+  pet_image: req.body.image
   });
   newAnimal.save(function(err){
     if(err){
