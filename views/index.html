@@ -8,6 +8,7 @@
 <!-- Sourcing -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" media="screen" title="no title" charset="utf-8">
 
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
@@ -17,7 +18,7 @@
 
   <body ng-controller="mainController">
 <!-- Navigation -->
-    <nav class="navbar navbar-default" background: blue>
+    <nav>
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">Meet the Pets Application</a>
@@ -33,9 +34,7 @@
 
     <div id="main">
 
-      <!-- angular templating -->
-  		<!-- this is where content will be injected -->
-      <div ng-view></div>
+      <div class='main' ng-view></div>
 
     </div>
 <!-- Footer -->

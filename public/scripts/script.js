@@ -32,6 +32,8 @@ myApp.controller('mainController', [ '$scope', '$http', function ($scope, $http)
   $scope.message = 'Hello, welcome to the Meet the Pets application. Please go to Add page to add your pet to the family. If you wish to view all the pets, please visit the Pets page.';
 }]);
 
+// ---------------------------------------------------------------------------------
+
 myApp.controller('addController', [ '$scope', '$http', function ($scope, $http) {
 
     $scope.addPet = function (){
