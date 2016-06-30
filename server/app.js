@@ -29,6 +29,7 @@ app.get('/',function( req, res ){
 
 // --------------------------------------------------------
 
+// Add New Pet
 app.post('/add', function( req, res ){
 var newAnimal = new Pet ({
   pet_name: req.body.name,
@@ -48,6 +49,7 @@ var newAnimal = new Pet ({
 });
 
 // --------------------------------------------------------
+
 // App.get to display on DOM
 app.get('/getPets', function( req, res){
   console.log("in app.get");
@@ -62,5 +64,6 @@ app.listen( 3000, 'localhost', function( req, res ){
 });
 
 // --------------------------------------------------------
+
 // Setting up static folder
 app.use( express.static( 'public' ) );

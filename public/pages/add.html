@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-
-    <div ng-controller = "addController">
-      <form class="jumbotron text-center" action="index.html" method="post">
-        <h3>Pet's Name</h3>
-        <input type="text" ng-model = "nameIn" name="petName" id="petName" value="">
-        <h3>Pet's Type</h3>
-        <input type="text" ng-model = "typeIn" name="petType" id="petType" value="">
-        <h3>Pet's Age</h3>
-        <input type="number" ng-model = "ageIn" name="petAge" id="petAge" value="">
-        <h3>Pet's Image</h3>
-        <input type="text" ng-model = "imageIn" name="petImage" id="petImage" value="">
-
-          <br><br>
-        <input type="button" name="submitButton" id="submitButton" value="submit" ng-click="addPet()">
-      </form>
-    </div>
-  </body>
-</html>
+<!-- Form for inputs -->
+<div ng-controller = "addController">
+  <form class="jumbotron text-center" action="index.html" method="post">
+    <h3>Pet's Name</h3>
+    <input type="text" ng-model = "nameIn" name="petName" id="petName" value="">
+    <h3>Pet's Type</h3>
+    <input type="text" ng-model = "typeIn" name="petType" id="petType" value="">
+    <h3>Pet's Age</h3>
+    <input type="number" ng-model = "ageIn" name="petAge" id="petAge" value="">
+    <h3>Pet's Image</h3>
+    <input type="text" ng-model = "imageIn" name="petImage" id="petImage" value="">
+      <br><br>
+    <input type="button" name="submitButton" id="submitButton" value="submit" ng-click="addPet()">
+  </form>
+</div>

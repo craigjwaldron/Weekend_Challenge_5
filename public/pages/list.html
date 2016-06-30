@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html ng-app="myApp">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-
-    <ul style="list-style-type:none" align="center" ng-controller = "listController">
-
-      <li class="jumbotron text-center" ng-repeat= "pet in allPets"><img ng-src="{{pet.pet_image}}"/><br><p><b>Name: </b>{{pet.pet_name}}</p><p><b>Type: </b>{{pet.pet_type}}</p><p><b>Age: </b>{{pet.pet_age}}</p></li>
-
-    </ul>
-
-  </body>
-</html>
+<!-- Showing all pets in a list -->
+<ul style="list-style-type:none" align="center" ng-controller = "listController">
+  <li class="jumbotron text-center" ng-repeat= "pet in allPets"><img ng-src="{{pet.pet_image}}"/><br><p><b>Name: </b>{{pet.pet_name}}</p><p><b>Type: </b>{{pet.pet_type}}</p><p><b>Age: </b>{{pet.pet_age}}</p></li>
+</ul>

@@ -5,6 +5,7 @@ var myApp = angular.module('myApp', ['ngRoute']);
 
 // ---------------------------------------------------------------------------------
 // Configure routes
+
 myApp.config(function($routeProvider) {
   $routeProvider
 
@@ -28,12 +29,14 @@ myApp.config(function($routeProvider) {
 });
 // ---------------------------------------------------------------------------------
 
+// Welcome controller (Experimenting with Angular)
 myApp.controller('mainController', [ '$scope', '$http', function ($scope, $http) {
   $scope.message = 'Hello, welcome to the Meet the Pets application. Please go to Add page to add your pet to the family. If you wish to view all the pets, please visit the Pets page.';
-}]);
+}]); // End of main controller
 
 // ---------------------------------------------------------------------------------
 
+// Add controller to add new pet
 myApp.controller('addController', [ '$scope', '$http', function ($scope, $http) {
 
     $scope.addPet = function (){
@@ -62,6 +65,7 @@ myApp.controller('addController', [ '$scope', '$http', function ($scope, $http) 
 
 // ---------------------------------------------------------------------------------
 
+// List controller to view list
 myApp.controller('listController', [ '$scope', '$http', function ($scope, $http) {
   $scope.allPets = [];
 
@@ -73,9 +77,7 @@ myApp.controller('listController', [ '$scope', '$http', function ($scope, $http)
 }).then(function( response ){
   $scope.allPets = response.data;
   console.log($scope.response);
-  });
-// Push??????
-
-  };
+    }); // End of then function
+  }; // End of $scope.showAllPets
   $scope.showAllPets();
-}]);
+}]); // End of list controller
